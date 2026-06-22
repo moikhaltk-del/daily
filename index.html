@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAILIES L'MLA7</title>
+    <!-- Premium Gaming Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        /* Gaming Theme Color Palette */
+        :root {
+            --bg-color: #05070b;
+            --card-bg: #0e1118;
+            --accent-purple: #9d00ff;
+            --accent-glow: #bd5eff;
+            --accent-cyan: #00f0ff;
+            --text-main: #ffffff;
+            --text-muted: #8a99ad;
+            --border-normal: rgba(255, 255, 255, 0.05);
+            --border-hover: rgba(157, 0, 255, 0.6);
+            
+            /* Custom SVG Icons mapped out as backgrounds */
+            --ico-lol: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z'/%3E%3C/svg%3E");
+            --ico-val: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'/%3E%3C/svg%3E");
+            --ico-word: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5c-.345 2.895-1.483 5.745-3.339 8.245'/%3E%3C/svg%3E");
+            --ico-nerd: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'/%3E%3C/svg%3E");
+            --ico-guess: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+            --ico-movies: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z'/%3E%3C/svg%3E");
+            --ico-music: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'/%3E%3C/svg%3E");
+            --ico-anime: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+            --ico-geo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E");
+            --ico-sports: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.5M14 21h1a2 2 0 002-2v-1a2 2 0 012-2h1.83M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 20% 15%, rgba(157, 0, 255, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 80% 75%, rgba(0, 240, 255, 0.06) 0%, transparent 30%);
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-main);
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Mouse Glow Element */
+        #bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(157, 0, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            mix-blend-mode: screen;
+            transition: width 0.2s, height 0.2s;
+        }
+
+        /* Header Layout */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+
+        /* Animated Title Effect */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: linear-gradient(90deg, #ffffff, #e1b3ff, #ffffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+            filter: drop-shadow(0 0 15px rgba(157, 0, 255, 0.4));
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* The 7 styling */
+        .seven {
+            color: var(--accent-cyan);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            -webkit-text-fill-color: var(--accent-cyan);
+            filter: drop-shadow(0 0 12px var(--accent-cyan));
+        }
+
+        /* Premium Glassmorphism Quote Card */
+        .description {
+            color: var(--text-main);
+            font-style: italic;
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto;
+            border-left: 4px solid var(--accent-purple);
+            padding: 15px 25px;
+            background: rgba(14, 17, 24, 0.4);
+            border-radius: 0 16px 16px 0;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-right: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        /* Interactive Dashboard Tools Utility Bar */
+        .utility-bar {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+
+        /* Tactical Game Search Input */
+        .search-box {
+            flex: 1;
+            background: #0d1017;
+            border: 1px solid var(--border-normal);
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: #ffffff;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .search-box:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Random Game Command Trigger Button */
+        .random-btn {
+            background: linear-gradient(135deg, var(--accent-purple), #6a00b0);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .random-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(157, 0, 255, 0.6), 0 0 15px var(--accent-cyan);
+            background: linear-gradient(135deg, #b124ff, var(--accent-purple));
+        }
+
+        /* Dashboard Architecture */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            z-index: 5;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        /* Category Header with Glow and Responsive Icons */
+        .category-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 45px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            width: 26px;
+            height: 26px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 0 5px var(--accent-cyan));
+        }
+
+        /* Assigning dynamic graphics before categories */
+        .sec-lol .category-title::after { background-image: var(--ico-lol); }
+        .sec-val .category-title::after { background-image: var(--ico-val); }
+        .sec-word .category-title::after { background-image: var(--ico-word); }
+        .sec-nerd .category-title::after { background-image: var(--ico-nerd); }
+        .sec-guess .category-title::after { background-image: var(--ico-guess); }
+        .sec-movies .category-title::after { background-image: var(--ico-movies); }
+        .sec-music .category-title::after { background-image: var(--ico-music); }
+        .sec-anime .category-title::after { background-image: var(--ico-anime); }
+        .sec-geo .category-title::after { background-image: var(--ico-geo); }
+        .sec-sports .category-title::after { background-image: var(--ico-sports); }
+        
+        /* Cyberpunk line under category titles */
+        .category-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 120%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-cyan) 50%, transparent 100%);
+        }
+
+        /* Grid Setup */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            background-color: transparent; 
+        }
+
+        /* Dynamic Sci-Fi Game Cards */
+        .game-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-normal);
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            background-image: linear-gradient(145deg, #121620 0%, #0a0d14 100%);
+            
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 85px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            
+            /* Staggered loading state configurations */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: cardEntrance 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+
+        @keyframes cardEntrance {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hover Mechanics and Background Lighting */
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15) 0%, transparent 50%, rgba(0, 240, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .game-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+            transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 0 10px rgba(157, 0, 255, 0.8);
+        }
+
+        .game-card span {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px) !important; /* Overwrite animation frame */
+            border-color: var(--border-hover);
+            color: #ffffff;
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(157, 0, 255, 0.25);
+        }
+
+        .game-card:hover::before { opacity: 1; }
+        .game-card:hover::after { width: 100%; }
+        .game-card:hover span {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            transform: scale(1.03);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; letter-spacing: 2px; }
+            .category-title { font-size: 1.3rem; }
+            .utility-bar { flex-direction: column; }
+            .random-btn { padding: 15px; justify-content: center; }
+            .game-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 15px; }
+            #bg-glow { display: none; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .game-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+            .description { font-size: 1.05rem; padding: 12px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Cursor Follower Box -->
+    <div id="bg-glow"></div>
+
+    <header>
+        <h1>DAILIES L'MLA<span class="seven">7</span></h1>
+        <div class="description">"qalt likm Rabab koulshi yshark ta 7ed mayskt"</div>
+    </header>
+
+    <!-- Utility Panel Controls -->
+    <div class="utility-bar">
+        <input type="text" id="gameSearch" class="search-box" placeholder="Search for a daily task or category...">
+        <button class="random-btn" onclick="playRandomGame()">
+            <svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            Random Game
+        </button>
+    </div>
+
+    <main class="container">
+
+        <!-- LoL -->
+        <section class="category-section sec-lol">
+            <div class="category-title">LoL</div>
+            <div class="game-grid">
+                <a href="https://loldle.net/" target="_blank" class="game-card"><span>LoLdle</span></a>
+                <a href="https://www.buildle.gg/" target="_blank" class="game-card"><span>Buildle</span></a>
+                <a href="https://www.champdle.com/" target="_blank" class="game-card"><span>Champdle</span></a>
+                <a href="https://guesstherank.org/leagueoflegends" target="_blank" class="game-card"><span>Guess The Rank (LoL)</span></a>
+            </div>
+        </section>
+
+        <!-- Valorant -->
+        <section class="category-section sec-val">
+            <div class="category-title">Valorant</div>
+            <div class="game-grid">
+                <a href="https://www.valdle.gg/" target="_blank" class="game-card"><span>Valdle.gg</span></a>
+                <a href="https://www.valdle.com/" target="_blank" class="game-card"><span>Valdle.com</span></a>
+                <a href="https://guesstherank.org/valorant" target="_blank" class="game-card"><span>Guess The Rank (Val)</span></a>
+            </div>
+        </section>
+
+        <!-- Word Games -->
+        <section class="category-section sec-word">
+            <div class="category-title">Word Games</div>
+            <div class="game-grid">
+                <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" class="game-card"><span>Wordle</span></a>
+                <a href="https://linxicon.com/" target="_blank" class="game-card"><span>Linxicon</span></a>
+                <a href="https://contexto.me/en/" target="_blank" class="game-card"><span>Contexto</span></a>
+                <a href="https://wordhub.com/" target="_blank" class="game-card"><span>Wordhub</span></a>
+                <a href="https://poople.io/" target="_blank" class="game-card"><span>Poople</span></a>
+                <a href="https://conexo.ws/en/" target="_blank" class="game-card"><span>Conexo</span></a>
+                <a href="https://decipher.wtf/" target="_blank" class="game-card"><span>Decipher</span></a>
+            </div>
+        </section>
+
+        <!-- Nerd Games -->
+        <section class="category-section sec-nerd">
+            <div class="category-title">Nerd Games</div>
+            <div class="game-grid">
+                <a href="https://numble.wtf/" target="_blank" class="game-card"><span>Numble</span></a>
+                <a href="https://nerdlegame.com/guesswhat/" target="_blank" class="game-card"><span>Nerdle (GuessWhat)</span></a>
+                <a href="https://dialed.gg/" target="_blank" class="game-card"><span>Dialed</span></a>
+                <a href="https://spots.wtf/" target="_blank" class="game-card"><span>Spots</span></a>
+                <a href="https://quizl.io/" target="_blank" class="game-card"><span>Quizl</span></a>
+                <a href="https://poopguessr.com/" target="_blank" class="game-card"><span>Poopguessr</span></a>
+            </div>
+        </section>
+
+        <!-- Let's Guess -->
+        <section class="category-section sec-guess">
+            <div class="category-title">Let's Guess</div>
+            <div class="game-grid">
+                <a href="https://foodguessr.com/" target="_blank" class="game-card"><span>Foodguessr</span></a>
+                <a href="https://archiguesser.com/" target="_blank" class="game-card"><span>Archiguesser</span></a>
+                <a href="https://guessthelogo.wtf/" target="_blank" class="game-card"><span>Guess The Logo</span></a>
+                <a href="https://timeguessr.com/" target="_blank" class="game-card"><span>Timeguessr</span></a>
+                <a href="https://historiaquest.com/" target="_blank" class="game-card"><span>Historia Quest</span></a>
+                <a href="https://playearlier.com/" target="_blank" class="game-card"><span>Play Earlier</span></a>
+            </div>
+        </section>
+
+        <!-- Movies -->
+        <section class="category-section sec-movies">
+            <div class="category-title">Movies</div>
+            <div class="game-grid">
+                <a href="https://framed.wtf/" target="_blank" class="game-card"><span>Framed</span></a>
+                <a href="https://plotwords.com/" target="_blank" class="game-card"><span>Plotwords</span></a>
+                <a href="https://gaps.wtf/" target="_blank" class="game-card"><span>Gaps</span></a>
+                <a href="https://faces.wtf/" target="_blank" class="game-card"><span>Faces</span></a>
+                <a href="https://spotle.movie/" target="_blank" class="game-card"><span>Spotle Movie</span></a>
+                <a href="https://flickle.app/" target="_blank" class="game-card"><span>Flickle</span></a>
+                <a href="https://episode.wtf/" target="_blank" class="game-card"><span>Episode</span></a>
+            </div>
+        </section>
+
+        <!-- Music -->
+        <section class="category-section sec-music">
+            <div class="category-title">Music</div>
+            <div class="game-grid">
+                <a href="https://bandle.app/" target="_blank" class="game-card"><span>Bandle</span></a>
+                <a href="https://crosstune.io/" target="_blank" class="game-card"><span>Crosstune</span></a>
+                <a href="https://spotle.io/" target="_blank" class="game-card"><span>Spotle Music</span></a>
+            </div>
+        </section>
+
+        <!-- Anime -->
+        <section class="category-section sec-anime">
+            <div class="category-title">Anime</div>
+            <div class="game-grid">
+                <a href="https://narutodle.net/" target="_blank" class="game-card"><span>Narutodle</span></a>
+                <a href="https://onepiecedle.net/" target="_blank" class="game-card"><span>Onepiecedle</span></a>
+            </div>
+        </section>
+
+        <!-- Geography -->
+        <section class="category-section sec-geo">
+            <div class="category-title">Geography</div>
+            <div class="game-grid">
+                <a href="https://www.geoguessr.com/" target="_blank" class="game-card"><span>GeoGuessr</span></a>
+                <a href="https://globle-game.com/" target="_blank" class="game-card"><span>Globle</span></a>
+                <a href="https://globle-capitals.com/" target="_blank" class="game-card"><span>Globle Capitals</span></a>
+                <a href="https://flagsgame.net/" target="_blank" class="game-card"><span>Flags Game</span></a>
+                <a href="https://flagle-game.com/" target="_blank" class="game-card"><span>Flagle</span></a>
+                <a href="https://geographly.app/" target="_blank" class="game-card"><span>Geographly</span></a>
+            </div>
+        </section>
+
+        <!-- Sports -->
+        <section class="category-section sec-sports">
+            <div class="category-title">Sports</div>
+            <div class="game-grid">
+                <a href="https://playfootball.games/en-us/who-are-ya/big-4/" target="_blank" class="game-card"><span>Who Are Ya?</span></a>
+                <a href="https://sportdle.net/" target="_blank" class="game-card"><span>Sportdle</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Real-time tracking mouse cursor trail laser
+        const glow = document.getElementById('bg-glow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Staggered incremental intro transition cascade calculation
+        document.querySelectorAll('.game-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.02}s`;
+        });
+
+        // Instant Real-time Database Search Filter System Engine
+        const searchInput = document.getElementById('gameSearch');
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const sections = document.querySelectorAll('.category-section');
+            
+            sections.forEach(section => {
+                const title = section.querySelector('.category-title').textContent.toLowerCase();
+                const cards = section.querySelectorAll('.game-card');
+                let matchesInsideSection = false;
+                
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if(text.includes(query) || title.includes(query)) {
+                        card.style.display = 'flex';
+                        matchesInsideSection = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                if(matchesInsideSection) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+
+        // Command Engine: Pick one completely random game link and launch it
+        function playRandomGame() {
+            const allCards = document.querySelectorAll('.game-card');
+            if(allCards.length > 0) {
+                const randomIndex = Math.floor(Math.random() * allCards.length);
+                const randomTarget = allCards[randomIndex].getAttribute('href');
+                window.open(randomTarget, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
