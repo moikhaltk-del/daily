@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAILIES L'MLA7</title>
     
-    <!-- Custom SVG Favicon Matched to image_183641.png -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M22,25 C22,33 24,35 24,35 L33,35 L33,25 H78 L49,85 C49,85 46,89 40,89 C34,89 31,85 31,85 L56,35 H22 Z%22 fill=%22%2300f0ff%22/></svg>">
+    <!-- Custom Heavy Geometric 7 Icon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M15,15 H85 V38 L48,85 H20 L55,38 H15 Z%22 fill=%22%2300f0ff%22/></svg>">
     
     <!-- Premium Gaming Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
@@ -99,12 +99,14 @@
             to { background-position: 200% center; }
         }
 
-        /* The 7 styling */
+        /* The 7 styling synchronized to match the icon exactly */
         .seven {
-            color: var(--accent-cyan);
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: 900;
-            -webkit-text-fill-color: var(--accent-cyan);
+            display: inline-block;
+            width: 0.75em;
+            height: 0.85em;
+            vertical-align: -0.05em;
+            background-color: var(--accent-cyan);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 46% 100%, 7% 100%, 57% 30%, 0% 30%);
             filter: drop-shadow(0 0 12px var(--accent-cyan));
         }
 
@@ -352,7 +354,7 @@
     <div id="bg-glow"></div>
 
     <header>
-        <h1>DAILIES L'MLA<span class="seven">7</span></h1>
+        <h1>DAILIES L'MLA<span class="seven"></span></h1>
         <div class="description">"qalt likm Rabab koulshi yshark ta 7ed mayskt"</div>
     </header>
 
