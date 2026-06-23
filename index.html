@@ -34,6 +34,7 @@
             --ico-anime: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
             --ico-geo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E");
             --ico-sports: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.5M14 21h1a2 2 0 002-2v-1a2 2 0 012-2h1.83M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+            --ico-fav: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ff00da'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'/%3E%3C/svg%3E");
         }
 
         * {
@@ -84,7 +85,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.8rem;
             font-weight: 900;
-            margin: 0 0 20px 0;
+            margin: 0 0 10px 0;
             text-transform: uppercase;
             letter-spacing: 4px;
             background: linear-gradient(90deg, #ffffff, #e1b3ff, #ffffff);
@@ -110,13 +111,62 @@
             filter: drop-shadow(0 0 12px var(--accent-cyan));
         }
 
+        .sub-header-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Streak and Meta Info Badge Layout */
+        .meta-badges-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .streak-badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            color: #ff00da;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(255, 0, 218, 0.4);
+        }
+
+        .timer-badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+
+        /* Sound Control Button */
+        .sound-toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+
+        .sound-toggle-btn:hover {
+            color: var(--accent-cyan);
+        }
+
         /* Premium Glassmorphism Quote Card */
         .description {
             color: var(--text-main);
             font-style: italic;
             font-size: 1.25rem;
-            max-width: 650px;
-            margin: 0 auto;
             border-left: 4px solid var(--accent-purple);
             padding: 15px 25px;
             background: rgba(14, 17, 24, 0.4);
@@ -159,29 +209,58 @@
             box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Random Game Command Trigger Button */
-        .random-btn {
-            background: linear-gradient(135deg, var(--accent-purple), #6a00b0);
+        /* Dashboard Utility Actions Setup */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Tactical Buttons System */
+        .action-btn {
+            background: #0e1118;
             color: white;
-            border: none;
-            padding: 0 25px;
+            border: 1px solid var(--border-normal);
+            padding: 0 20px;
             border-radius: 12px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
+            font-size: 0.9rem;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.4);
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .random-btn:hover {
+        .action-btn:hover {
             transform: translateY(-2px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.2);
+        }
+
+        .random-btn {
+            background: linear-gradient(135deg, var(--accent-purple), #6a00b0);
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.4);
+            border: none;
+        }
+
+        .random-btn:hover {
             box-shadow: 0 6px 20px rgba(157, 0, 255, 0.6), 0 0 15px var(--accent-cyan);
             background: linear-gradient(135deg, #b124ff, var(--accent-purple));
+        }
+        
+        .routine-btn {
+            border-color: #ff00da;
+            color: #ff00da;
+            display: none; /* Only show when items are starred */
+        }
+        
+        .routine-btn:hover {
+            background: rgba(255, 0, 218, 0.1);
+            box-shadow: 0 0 15px rgba(255, 0, 218, 0.3);
+            border-color: #ff00da;
         }
 
         /* Dashboard Architecture */
@@ -195,6 +274,11 @@
             margin-bottom: 60px;
             transition: opacity 0.4s ease, transform 0.4s ease;
         }
+
+        /* Dynamic Routine Section Configuration */
+        .sec-fav .category-title::after { background-image: var(--ico-fav); filter: drop-shadow(0 0 5px #ff00da); }
+        .sec-fav .category-title::before { background: linear-gradient(90deg, #ff00da 0%, var(--accent-purple) 100%); }
+        .sec-fav { display: none; margin-bottom: 45px; }
 
         /* Category Header with Glow and Responsive Icons */
         .category-title {
@@ -278,6 +362,9 @@
             opacity: 0;
             transform: translateY(20px);
             animation: cardEntrance 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         @keyframes cardEntrance {
@@ -332,12 +419,61 @@
             transform: scale(1.03);
         }
 
+        /* Star Button Utilities */
+        .star-icon {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.15;
+            transition: all 0.2s ease;
+            fill: none;
+            stroke: var(--text-muted);
+            stroke-width: 2;
+        }
+
+        .game-card:hover .star-icon, .star-icon.starred {
+            opacity: 1;
+        }
+
+        .star-icon.starred {
+            fill: #ff00da;
+            stroke: #ff00da;
+            filter: drop-shadow(0 0 4px #ff00da);
+        }
+
+        /* Completed/Done State Treatment */
+        .game-card.completed {
+            border-color: rgba(0, 240, 255, 0.15) !important;
+            background: linear-gradient(145deg, #07090e 0%, #05060a 100%) !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+        
+        .game-card.completed span {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.2) !important;
+            text-shadow: none !important;
+        }
+        
+        .game-card.completed::before, .game-card.completed::after {
+            display: none !important;
+        }
+        
+        .game-card.completed::shadow {
+            display: none;
+        }
+
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
             h1 { font-size: 2.8rem; letter-spacing: 2px; }
             .category-title { font-size: 1.3rem; }
             .utility-bar { flex-direction: column; }
-            .random-btn { padding: 15px; justify-content: center; }
+            .btn-group { width: 100%; }
+            .action-btn { flex: 1; padding: 15px; justify-content: center; }
             .game-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 15px; }
             #bg-glow { display: none; }
         }
@@ -355,19 +491,41 @@
 
     <header>
         <h1>DAILIES L'MLA<span class="seven"></span></h1>
-        <div class="description">"koulshi yshark ta 7ed mayskt"</div>
+        <div class="sub-header-container">
+            <div class="meta-badges-container">
+                <div class="streak-badge" id="streakDisplay">🔥 0 Day Streak</div>
+                <div class="timer-badge" id="resetTimer">🕒 Reset: 00h 00m 00s</div>
+                <button class="sound-toggle-btn" id="soundToggle" onclick="toggleMute()" title="Toggle Sound FX">
+                    <svg id="soundOnIcon" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                    <svg id="soundOffIcon" style="width:16px;height:16px;display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                </button>
+            </div>
+            <div class="description">koulshi yshark ta 7ed mayskt</div>
+        </div>
     </header>
 
     <!-- Utility Panel Controls -->
     <div class="utility-bar">
         <input type="text" id="gameSearch" class="search-box" placeholder="Search for a daily task or category...">
-        <button class="random-btn" onclick="playRandomGame()">
-            <svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-            Random Game
-        </button>
+        <div class="btn-group">
+            <button class="action-btn routine-btn" id="launchRoutineBtn" onclick="launchRoutine()">
+                <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
+                Launch Routine
+            </button>
+            <button class="action-btn random-btn" onclick="playRandomGame()">
+                <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+                Random Game
+            </button>
+        </div>
     </div>
 
     <main class="container">
+
+        <!-- Dynamic Routine Starred Feed Section -->
+        <section class="category-section sec-fav" id="favoritesSection">
+            <div class="category-title">My Routine</div>
+            <div class="game-grid" id="favoritesGrid"></div>
+        </section>
 
         <!-- LoL -->
         <section class="category-section sec-lol">
@@ -499,10 +657,230 @@
             glow.style.top = e.clientY + 'px';
         });
 
-        // Staggered incremental intro transition cascade calculation
+        // Synthesized Premium Audio Engine Logic (Web Audio API)
+        let audioMuted = localStorage.getItem('routine_audio_muted') === 'true';
+        updateSoundIcons();
+
+        function createAudioContext() {
+            return new (window.AudioContext || window.webkitAudioContext)();
+        }
+
+        function playSynthSound(type) {
+            if (audioMuted) return;
+            try {
+                const ctx = createAudioContext();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                if (type === 'hover') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(400, ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.04);
+                    gain.gain.setValueAtTime(0.015, ctx.currentTime);
+                    gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.04);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.04);
+                } else if (type === 'complete') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+                    osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.06); // E5
+                    osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.12); // G5
+                    gain.gain.setValueAtTime(0.06, ctx.currentTime);
+                    gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.3);
+                }
+            } catch (e) { console.log("Audio contexts blocked or unsupported."); }
+        }
+
+        function toggleMute() {
+            audioMuted = !audioMuted;
+            localStorage.setItem('routine_audio_muted', audioMuted);
+            updateSoundIcons();
+        }
+
+        function updateSoundIcons() {
+            document.getElementById('soundOnIcon').style.display = audioMuted ? 'none' : 'block';
+            document.getElementById('soundOffIcon').style.display = audioMuted ? 'block' : 'none';
+        }
+
+        // Unique dynamic ID generator for localstorage mapping structure
+        document.querySelectorAll('.game-grid .game-card').forEach(card => {
+            const explicitName = card.querySelector('span').textContent.trim();
+            card.setAttribute('data-id', btoa(explicitName).replace(/=/g, ''));
+        });
+
+        // Routine Storage Tracker & Render Engine
+        let starredItems = JSON.parse(localStorage.getItem('routine_starred')) || [];
+        let completedItems = JSON.parse(localStorage.getItem('routine_completed')) || {};
+        
+        // Wipe storage checking timestamp system if days changed
+        const todayKey = new Date().toISOString().split('T')[0];
+        if (completedItems.date !== todayKey) {
+            completedItems = { date: todayKey, list: [] };
+            localStorage.setItem('routine_completed', JSON.stringify(completedItems));
+        }
+
+        // Initialize setup elements loop
         document.querySelectorAll('.game-card').forEach((card, index) => {
             card.style.animationDelay = `${index * 0.02}s`;
+            const cardId = card.getAttribute('data-id');
+
+            // Inject star selector nodes dynamically
+            const star = document.createElement('div');
+            star.className = 'star-icon';
+            star.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+            card.appendChild(star);
+
+            if (starredItems.includes(cardId)) {
+                star.classList.add('starred');
+            }
+            if (completedItems.list.includes(cardId)) {
+                card.classList.add('completed');
+            }
+
+            // Web Audio SFX Connect
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('completed')) playSynthSound('hover');
+            });
+
+            // Star clicks handler logic
+            star.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (star.classList.contains('starred')) {
+                    star.classList.remove('starred');
+                    starredItems = starredItems.filter(id => id !== cardId);
+                } else {
+                    star.classList.add('starred');
+                    starredItems.push(cardId);
+                }
+                localStorage.setItem('routine_starred', JSON.stringify(starredItems));
+                syncFavoritesPanel();
+            });
+
+            // Completed mark via right click context trigger
+            card.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                toggleComplete(cardId);
+            });
+
+            // Mobile long-press feature support fallback
+            let pressTimer;
+            card.addEventListener('touchstart', () => {
+                pressTimer = setTimeout(() => toggleComplete(cardId), 600);
+            });
+            card.addEventListener('touchend', () => clearTimeout(pressTimer));
         });
+
+        function toggleComplete(cardId) {
+            const matchingCards = document.querySelectorAll(`[data-id="${cardId}"]`);
+            if (completedItems.list.includes(cardId)) {
+                completedItems.list = completedItems.list.filter(id => id !== cardId);
+                matchingCards.forEach(c => c.classList.remove('completed'));
+            } else {
+                completedItems.list.push(cardId);
+                matchingCards.forEach(c => c.classList.add('completed'));
+                playSynthSound('complete');
+            }
+            localStorage.setItem('routine_completed', JSON.stringify(completedItems));
+        }
+
+        // Synchronize and mirror layout tracking views for starred container
+        function syncFavoritesPanel() {
+            const favGrid = document.getElementById('favoritesGrid');
+            const favSec = document.getElementById('favoritesSection');
+            const launchBtn = document.getElementById('launchRoutineBtn');
+            favGrid.innerHTML = '';
+
+            const originalCards = Array.from(document.querySelectorAll('main > section:not(.sec-fav) .game-card'));
+            let count = 0;
+
+            originalCards.forEach(card => {
+                const cardId = card.getAttribute('data-id');
+                if (starredItems.includes(cardId)) {
+                    count++;
+                    const clone = card.cloneNode(true);
+                    
+                    // Reapply sound and event tracking modules directly into cloned nodes
+                    clone.addEventListener('mouseenter', () => {
+                        if (!clone.classList.contains('completed')) playSynthSound('hover');
+                    });
+                    clone.querySelector('.star-icon').addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        document.querySelector(`main > section:not(.sec-fav) [data-id="${cardId}"] .star-icon`).click();
+                    });
+                    clone.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        toggleComplete(cardId);
+                    });
+                    favGrid.appendChild(clone);
+                }
+            });
+
+            if (count > 0) {
+                favSec.style.display = 'block';
+                launchBtn.style.display = 'flex';
+            } else {
+                favSec.style.display = 'none';
+                launchBtn.style.display = 'none';
+            }
+        }
+        syncFavoritesPanel();
+
+        // Multi-Tab Trigger configuration launcher
+        function launchRoutine() {
+            const favCards = document.querySelectorAll('#favoritesGrid .game-card');
+            favCards.forEach(card => {
+                window.open(card.getAttribute('href'), '_blank');
+            });
+        }
+
+        // Dynamic Streak Maintenance Mechanics Engine
+        function handleStreakEngine() {
+            const lastVisit = localStorage.getItem('routine_last_visit');
+            let streak = parseInt(localStorage.getItem('routine_streak_count')) || 0;
+            const yesterdayKey = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+            if (lastVisit === yesterdayKey) {
+                streak++;
+            } else if (lastVisit !== todayKey) {
+                streak = 1;
+            }
+            
+            localStorage.setItem('routine_last_visit', todayKey);
+            localStorage.setItem('routine_streak_count', streak);
+            document.getElementById('streakDisplay').textContent = `🔥 ${streak} Day Streak`;
+        }
+        handleStreakEngine();
+
+        // Live Operational Countdown Engine System to Midnight
+        function updateCountdownTimer() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0); // Sets straight to tomorrow midnight 00:00:00
+
+            const diff = midnight - now;
+
+            // Automation checking protocol to auto-clear completions at midnight live
+            if (diff <= 0) {
+                localStorage.removeItem('routine_completed');
+                location.reload();
+                return;
+            }
+
+            const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+            const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+            const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+            document.getElementById('resetTimer').textContent = `🕒 Reset: ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateCountdownTimer, 1000);
+        updateCountdownTimer();
 
         // Instant Real-time Database Search Filter System Engine
         const searchInput = document.getElementById('gameSearch');
@@ -531,11 +909,13 @@
                     section.style.display = 'none';
                 }
             });
+            // Keep favorites configuration hidden out during clear runs if filtered clean
+            if(!query) syncFavoritesPanel();
         });
 
         // Command Engine: Pick one completely random game link and launch it
         function playRandomGame() {
-            const allCards = document.querySelectorAll('.game-card');
+            const allCards = document.querySelectorAll('main > section:not(.sec-fav) .game-card');
             if(allCards.length > 0) {
                 const randomIndex = Math.floor(Math.random() * allCards.length);
                 const randomTarget = allCards[randomIndex].getAttribute('href');
