@@ -494,7 +494,7 @@
         <div class="sub-header-container">
             <div class="meta-badges-container">
                 <div class="streak-badge" id="streakDisplay">🔥 0 Day Streak</div>
-                <div class="timer-badge" id="resetTimer">🕒 Reset: 00h 00m 00s</div>
+                <div class="timer-badge" id="resetTimer">🕒 Reset: 00h 00m</div>
                 <button class="sound-toggle-btn" id="soundToggle" onclick="toggleMute()" title="Toggle Sound FX">
                     <svg id="soundOnIcon" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                     <svg id="soundOffIcon" style="width:16px;height:16px;display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
@@ -877,7 +877,7 @@
             const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
             const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
 
-            document.getElementById('resetTimer').textContent = `🕒 Reset: ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById('resetTimer').textContent = `🕒 Reset: ${hours}h ${minutes}m`;
         }
         setInterval(updateCountdownTimer, 1000);
         updateCountdownTimer();
