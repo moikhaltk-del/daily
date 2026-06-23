@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAILIES L'MLA7</title>
-    <!-- Premium Gaming Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
     <style>
         /* Gaming Theme Color Palette */
@@ -344,7 +343,6 @@
 </head>
 <body>
 
-    <!-- Ambient Cursor Follower Box -->
     <div id="bg-glow"></div>
 
     <header>
@@ -352,7 +350,6 @@
         <div class="description">"qalt likm Rabab koulshi yshark ta 7ed mayskt"</div>
     </header>
 
-    <!-- Utility Panel Controls -->
     <div class="utility-bar">
         <input type="text" id="gameSearch" class="search-box" placeholder="Search for a daily task or category...">
         <button class="random-btn" onclick="playRandomGame()">
@@ -363,7 +360,6 @@
 
     <main class="container">
 
-        <!-- LoL -->
         <section class="category-section sec-lol">
             <div class="category-title">LoL</div>
             <div class="game-grid">
@@ -374,7 +370,6 @@
             </div>
         </section>
 
-        <!-- Valorant -->
         <section class="category-section sec-val">
             <div class="category-title">Valorant</div>
             <div class="game-grid">
@@ -384,7 +379,6 @@
             </div>
         </section>
 
-        <!-- Word Games -->
         <section class="category-section sec-word">
             <div class="category-title">Word Games</div>
             <div class="game-grid">
@@ -398,7 +392,6 @@
             </div>
         </section>
 
-        <!-- Nerd Games -->
         <section class="category-section sec-nerd">
             <div class="category-title">Nerd Games</div>
             <div class="game-grid">
@@ -413,7 +406,6 @@
             </div>
         </section>
 
-        <!-- Let's Guess -->
         <section class="category-section sec-guess">
             <div class="category-title">Let's Guess</div>
             <div class="game-grid">
@@ -426,7 +418,6 @@
             </div>
         </section>
 
-        <!-- Movies -->
         <section class="category-section sec-movies">
             <div class="category-title">Movies</div>
             <div class="game-grid">
@@ -440,7 +431,6 @@
             </div>
         </section>
 
-        <!-- Music -->
         <section class="category-section sec-music">
             <div class="category-title">Music</div>
             <div class="game-grid">
@@ -450,7 +440,6 @@
             </div>
         </section>
 
-        <!-- Anime -->
         <section class="category-section sec-anime">
             <div class="category-title">Anime</div>
             <div class="game-grid">
@@ -459,7 +448,6 @@
             </div>
         </section>
 
-        <!-- Geography -->
         <section class="category-section sec-geo">
             <div class="category-title">Geography</div>
             <div class="game-grid">
@@ -469,10 +457,11 @@
                 <a href="https://flagsgame.net/" target="_blank" class="game-card"><span>Flags Game</span></a>
                 <a href="https://flagle-game.com/" target="_blank" class="game-card"><span>Flagle</span></a>
                 <a href="https://geographly.app/" target="_blank" class="game-card"><span>Geographly</span></a>
+                <a href="https://metrosquest.com" target="_blank" class="game-card"><span>Metros Quest</span></a>
+                <a href="https://terraequest.com" target="_blank" class="game-card"><span>Terrae Quest</span></a>
             </div>
         </section>
 
-        <!-- Sports -->
         <section class="category-section sec-sports">
             <div class="category-title">Sports</div>
             <div class="game-grid">
@@ -481,59 +470,4 @@
             </div>
         </section>
 
-    </main>
-
-    <script>
-        // Real-time tracking mouse cursor trail laser
-        const glow = document.getElementById('bg-glow');
-        window.addEventListener('mousemove', (e) => {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
-
-        // Staggered incremental intro transition cascade calculation
-        document.querySelectorAll('.game-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.02}s`;
-        });
-
-        // Instant Real-time Database Search Filter System Engine
-        const searchInput = document.getElementById('gameSearch');
-        searchInput.addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
-            const sections = document.querySelectorAll('.category-section');
-            
-            sections.forEach(section => {
-                const title = section.querySelector('.category-title').textContent.toLowerCase();
-                const cards = section.querySelectorAll('.game-card');
-                let matchesInsideSection = false;
-                
-                cards.forEach(card => {
-                    const text = card.textContent.toLowerCase();
-                    if(text.includes(query) || title.includes(query)) {
-                        card.style.display = 'flex';
-                        matchesInsideSection = true;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                if(matchesInsideSection) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        });
-
-        // Command Engine: Pick one completely random game link and launch it
-        function playRandomGame() {
-            const allCards = document.querySelectorAll('.game-card');
-            if(allCards.length > 0) {
-                const randomIndex = Math.floor(Math.random() * allCards.length);
-                const randomTarget = allCards[randomIndex].getAttribute('href');
-                window.open(randomTarget, '_blank');
-            }
-        }
-    </script>
-</body>
-</html>
+    </
