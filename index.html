@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAILIES L'MLA7</title>
-    <!-- Premium Gaming Fonts -->
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.85em%22 x=%2250%%22 text-anchor=%22middle%22 font-family=%22Courier New, monospace%22 font-weight=%22900%22 fill=%22%2300f0ff%22 style=%22filter: drop-shadow(0px 0px 10px rgba(0, 240, 255, 0.75));%22>7</text></svg>">
+    
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
     <style>
         /* Gaming Theme Color Palette */
@@ -36,13 +38,31 @@
             box-sizing: border-box;
         }
 
+        /* Sleek Cyberpunk Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(157, 0, 255, 0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-purple);
+            box-shadow: 0 0 10px var(--accent-purple);
+        }
+
         body {
             font-family: 'Exo 2', sans-serif;
             background-color: var(--bg-color);
             background-image: 
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03)),
                 radial-gradient(circle at 20% 15%, rgba(157, 0, 255, 0.12) 0%, transparent 25%),
                 radial-gradient(circle at 80% 75%, rgba(0, 240, 255, 0.06) 0%, transparent 30%);
-            background-size: cover;
+            background-size: 100% 4px, 6px 100%, cover, cover;
             background-attachment: fixed;
             color: var(--text-main);
             margin: 0;
@@ -51,6 +71,35 @@
             flex-direction: column;
             align-items: center;
             overflow-x: hidden;
+        }
+
+        /* High-Tech Tactical HUD Scanline Grid Overlays */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.01));
+            z-index: 999;
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Moving Scanline Laser effect */
+        body::after {
+            content: "";
+            position: fixed;
+            top: -100px; left: 0; width: 100%; height: 5px;
+            background: rgba(157, 0, 255, 0.08);
+            animation: scanline 8s linear infinite;
+            z-index: 1000;
+            pointer-events: none;
+            filter: blur(2px);
+        }
+
+        @keyframes scanline {
+            0% { top: -10%; }
+            100% { top: 110%; }
         }
 
         /* Mouse Glow Element */
@@ -80,7 +129,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.8rem;
             font-weight: 900;
-            margin: 0 0 20px 0;
+            margin: 0 0 5px 0;
             text-transform: uppercase;
             letter-spacing: 4px;
             background: linear-gradient(90deg, #ffffff, #e1b3ff, #ffffff);
@@ -93,6 +142,18 @@
 
         @keyframes shine {
             to { background-position: 200% center; }
+        }
+
+        /* Live Active Stats Tracker Display sub-header */
+        .live-counter {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-weight: 700;
+            filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.5));
         }
 
         /* The 7 styling */
@@ -326,6 +387,12 @@
             transform: scale(1.03);
         }
 
+        /* Tactile Click/Press State */
+        .game-card:active {
+            transform: scale(0.97) translateY(-4px) !important;
+            transition: transform 0.1s ease;
+        }
+
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
             h1 { font-size: 2.8rem; letter-spacing: 2px; }
@@ -344,15 +411,14 @@
 </head>
 <body>
 
-    <!-- Ambient Cursor Follower Box -->
     <div id="bg-glow"></div>
 
     <header>
         <h1>DAILIES L'MLA<span class="seven">7</span></h1>
+        <div id="totalCounter" class="live-counter">SYSTEM ONLINE</div>
         <div class="description">"qalt likm Rabab koulshi yshark ta 7ed mayskt"</div>
     </header>
 
-    <!-- Utility Panel Controls -->
     <div class="utility-bar">
         <input type="text" id="gameSearch" class="search-box" placeholder="Search for a daily task or category...">
         <button class="random-btn" onclick="playRandomGame()">
@@ -363,7 +429,6 @@
 
     <main class="container">
 
-        <!-- LoL -->
         <section class="category-section sec-lol">
             <div class="category-title">LoL</div>
             <div class="game-grid">
@@ -374,7 +439,6 @@
             </div>
         </section>
 
-        <!-- Valorant -->
         <section class="category-section sec-val">
             <div class="category-title">Valorant</div>
             <div class="game-grid">
@@ -384,7 +448,6 @@
             </div>
         </section>
 
-        <!-- Word Games -->
         <section class="category-section sec-word">
             <div class="category-title">Word Games</div>
             <div class="game-grid">
@@ -398,7 +461,6 @@
             </div>
         </section>
 
-        <!-- Nerd Games -->
         <section class="category-section sec-nerd">
             <div class="category-title">Nerd Games</div>
             <div class="game-grid">
@@ -413,7 +475,6 @@
             </div>
         </section>
 
-        <!-- Let's Guess -->
         <section class="category-section sec-guess">
             <div class="category-title">Let's Guess</div>
             <div class="game-grid">
@@ -426,7 +487,6 @@
             </div>
         </section>
 
-        <!-- Movies -->
         <section class="category-section sec-movies">
             <div class="category-title">Movies</div>
             <div class="game-grid">
@@ -440,7 +500,6 @@
             </div>
         </section>
 
-        <!-- Music -->
         <section class="category-section sec-music">
             <div class="category-title">Music</div>
             <div class="game-grid">
@@ -450,7 +509,6 @@
             </div>
         </section>
 
-        <!-- Anime -->
         <section class="category-section sec-anime">
             <div class="category-title">Anime</div>
             <div class="game-grid">
@@ -459,7 +517,6 @@
             </div>
         </section>
 
-        <!-- Geography -->
         <section class="category-section sec-geo">
             <div class="category-title">Geography</div>
             <div class="game-grid">
@@ -474,7 +531,6 @@
             </div>
         </section>
 
-        <!-- Sports -->
         <section class="category-section sec-sports">
             <div class="category-title">Sports</div>
             <div class="game-grid">
@@ -493,12 +549,16 @@
             glow.style.top = e.clientY + 'px';
         });
 
+        // Initialize Total Counter Display
+        const allCards = document.querySelectorAll('.game-card');
+        document.getElementById('totalCounter').textContent = `${allCards.length} Modules Online`;
+
         // Staggered incremental intro transition cascade calculation
-        document.querySelectorAll('.game-card').forEach((card, index) => {
+        allCards.forEach((card, index) => {
             card.style.animationDelay = `${index * 0.02}s`;
         });
 
-        // Instant Real-time Database Search Filter System Engine
+        // Instant Real-time Database Search Filter System Engine with Smooth Fading
         const searchInput = document.getElementById('gameSearch');
         searchInput.addEventListener('input', function(e) {
             const query = e.target.value.toLowerCase();
@@ -521,15 +581,18 @@
                 
                 if(matchesInsideSection) {
                     section.style.display = 'block';
+                    section.style.opacity = '1';
+                    section.style.transform = 'scale(1)';
                 } else {
                     section.style.display = 'none';
+                    section.style.opacity = '0';
+                    section.style.transform = 'scale(0.98)';
                 }
             });
         });
 
         // Command Engine: Pick one completely random game link and launch it
         function playRandomGame() {
-            const allCards = document.querySelectorAll('.game-card');
             if(allCards.length > 0) {
                 const randomIndex = Math.floor(Math.random() * allCards.length);
                 const randomTarget = allCards[randomIndex].getAttribute('href');
