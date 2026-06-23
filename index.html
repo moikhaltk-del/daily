@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAILIES L'MLA7</title>
     
-    <!-- Custom Heavy Geometric 7 Icon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M15,15 H85 V38 L48,85 H20 L55,38 H15 Z%22 fill=%22%2300f0ff%22/></svg>">
     
-    <!-- Premium Gaming Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
     <style>
         /* Gaming Theme Color Palette */
@@ -29,7 +27,7 @@
             --ico-word: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5c-.345 2.895-1.483 5.745-3.339 8.245'/%3E%3C/svg%3E");
             --ico-nerd: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'/%3E%3C/svg%3E");
             --ico-guess: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
-            --ico-movies: url("data:image/svg+xml,%3Csvg xmlns='http='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z'/%3E%3C/svg%3E");
+            --ico-movies: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z'/%3E%3C/svg%3E");
             --ico-music: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'/%3E%3C/svg%3E");
             --ico-anime: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
             --ico-geo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300f0ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E");
@@ -123,6 +121,7 @@
             align-items: center;
             gap: 15px;
             margin-bottom: 12px;
+            flex-wrap: wrap;
         }
 
         .streak-badge {
@@ -220,7 +219,7 @@
             background: #0e1118;
             color: white;
             border: 1px solid var(--border-normal);
-            padding: 0 20px;
+            padding: 12px 24px;
             border-radius: 12px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
@@ -445,6 +444,33 @@
             filter: drop-shadow(0 0 4px #ff00da);
         }
 
+        /* --- EXCLUDE FROM RANDOMIZER ICON SETUP --- */
+        .exclude-icon {
+            position: absolute;
+            top: 6px;
+            left: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.2s ease;
+            color: #4a5568;
+            z-index: 10;
+            user-select: none;
+        }
+        
+        .game-card:hover .exclude-icon {
+            opacity: 0.4;
+        }
+        
+        .exclude-icon:hover, .exclude-icon.active {
+            opacity: 1 !important;
+            color: #ff3b30;
+        }
+        
+        .exclude-icon.active {
+            text-shadow: 0 0 5px #ff3b30;
+        }
+
         /* Completed/Done State Treatment */
         .game-card.completed {
             border-color: rgba(0, 240, 255, 0.15) !important;
@@ -461,10 +487,6 @@
         
         .game-card.completed::before, .game-card.completed::after {
             display: none !important;
-        }
-        
-        .game-card.completed::shadow {
-            display: none;
         }
 
         /* Responsive Breakpoints */
@@ -486,7 +508,6 @@
 </head>
 <body>
 
-    <!-- Ambient Cursor Follower Box -->
     <div id="bg-glow"></div>
 
     <header>
@@ -500,13 +521,12 @@
                     <svg id="soundOffIcon" style="width:16px;height:16px;display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
                 </button>
             </div>
-            <div class="description">koulshi yshark ta 7ed mayskt</div>
+            <div class="description">"koulshi yshark ta 7ed mayskt"</div>
         </div>
     </header>
 
-    <!-- Utility Panel Controls -->
     <div class="utility-bar">
-        <input type="text" id="gameSearch" class="search-box" placeholder="Search for a daily task or category...">
+        <input type="text" id="gameSearch" class="search-box" placeholder="Search daily puzzles or filters...">
         <div class="btn-group">
             <button class="action-btn routine-btn" id="launchRoutineBtn" onclick="launchRoutine()">
                 <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
@@ -521,13 +541,11 @@
 
     <main class="container">
 
-        <!-- Dynamic Routine Starred Feed Section -->
         <section class="category-section sec-fav" id="favoritesSection">
             <div class="category-title">My Routine</div>
             <div class="game-grid" id="favoritesGrid"></div>
         </section>
 
-        <!-- LoL -->
         <section class="category-section sec-lol">
             <div class="category-title">LoL</div>
             <div class="game-grid">
@@ -538,7 +556,6 @@
             </div>
         </section>
 
-        <!-- Valorant -->
         <section class="category-section sec-val">
             <div class="category-title">Valorant</div>
             <div class="game-grid">
@@ -548,7 +565,6 @@
             </div>
         </section>
 
-        <!-- Word Games -->
         <section class="category-section sec-word">
             <div class="category-title">Word Games</div>
             <div class="game-grid">
@@ -562,7 +578,6 @@
             </div>
         </section>
 
-        <!-- Nerd Games -->
         <section class="category-section sec-nerd">
             <div class="category-title">Nerd Games</div>
             <div class="game-grid">
@@ -577,7 +592,6 @@
             </div>
         </section>
 
-        <!-- Let's Guess -->
         <section class="category-section sec-guess">
             <div class="category-title">Let's Guess</div>
             <div class="game-grid">
@@ -590,7 +604,6 @@
             </div>
         </section>
 
-        <!-- Movies -->
         <section class="category-section sec-movies">
             <div class="category-title">Movies</div>
             <div class="game-grid">
@@ -604,7 +617,6 @@
             </div>
         </section>
 
-        <!-- Music -->
         <section class="category-section sec-music">
             <div class="category-title">Music</div>
             <div class="game-grid">
@@ -614,7 +626,6 @@
             </div>
         </section>
 
-        <!-- Anime -->
         <section class="category-section sec-anime">
             <div class="category-title">Anime</div>
             <div class="game-grid">
@@ -623,7 +634,6 @@
             </div>
         </section>
 
-        <!-- Geography -->
         <section class="category-section sec-geo">
             <div class="category-title">Geography</div>
             <div class="game-grid">
@@ -638,7 +648,6 @@
             </div>
         </section>
 
-        <!-- Sports -->
         <section class="category-section sec-sports">
             <div class="category-title">Sports</div>
             <div class="game-grid">
@@ -685,15 +694,15 @@
                     osc.stop(ctx.currentTime + 0.04);
                 } else if (type === 'complete') {
                     osc.type = 'triangle';
-                    osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-                    osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.06); // E5
-                    osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.12); // G5
+                    osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+                    osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.06);
+                    osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.12);
                     gain.gain.setValueAtTime(0.06, ctx.currentTime);
                     gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.3);
                     osc.start();
                     osc.stop(ctx.currentTime + 0.3);
                 }
-            } catch (e) { console.log("Audio contexts blocked or unsupported."); }
+            } catch (e) { console.log("Audio contextual block safety trigger."); }
         }
 
         function toggleMute() {
@@ -713,10 +722,11 @@
             card.setAttribute('data-id', btoa(explicitName).replace(/=/g, ''));
         });
 
-        // Routine Storage Tracker & Render Engine
+        // Core App Data Setup
         let starredItems = JSON.parse(localStorage.getItem('routine_starred')) || [];
         let completedItems = JSON.parse(localStorage.getItem('routine_completed')) || {};
-        
+        let excludedItems = JSON.parse(localStorage.getItem('routine_excluded')) || [];
+
         // Wipe storage checking timestamp system if days changed
         const todayKey = new Date().toISOString().split('T')[0];
         if (completedItems.date !== todayKey) {
@@ -735,22 +745,25 @@
             star.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
             card.appendChild(star);
 
-            if (starredItems.includes(cardId)) {
-                star.classList.add('starred');
-            }
-            if (completedItems.list.includes(cardId)) {
-                card.classList.add('completed');
-            }
+            // Inject exclude from randomizer nodes dynamically
+            const excludeBtn = document.createElement('div');
+            excludeBtn.className = 'exclude-icon';
+            excludeBtn.innerHTML = '⊝';
+            excludeBtn.title = 'Exclude from Randomizer';
+            card.appendChild(excludeBtn);
+
+            if (starredItems.includes(cardId)) star.classList.add('starred');
+            if (completedItems.list.includes(cardId)) card.classList.add('completed');
+            if (excludedItems.includes(cardId)) excludeBtn.classList.add('active');
 
             // Web Audio SFX Connect
             card.addEventListener('mouseenter', () => {
                 if (!card.classList.contains('completed')) playSynthSound('hover');
             });
 
-            // Star clicks handler logic
+            // Star functionality
             star.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
+                e.preventDefault(); e.stopPropagation();
                 if (star.classList.contains('starred')) {
                     star.classList.remove('starred');
                     starredItems = starredItems.filter(id => id !== cardId);
@@ -762,13 +775,26 @@
                 syncFavoritesPanel();
             });
 
-            // Completed mark via right click context trigger
+            // Exclude feature toggle action
+            excludeBtn.addEventListener('click', (e) => {
+                e.preventDefault(); e.stopPropagation();
+                const relatedIcons = document.querySelectorAll(`[data-id="${cardId}"] .exclude-icon`);
+                
+                if (excludedItems.includes(cardId)) {
+                    excludedItems = excludedItems.filter(id => id !== cardId);
+                    relatedIcons.forEach(i => i.classList.remove('active'));
+                } else {
+                    excludedItems.push(cardId);
+                    relatedIcons.forEach(i => i.classList.add('active'));
+                }
+                localStorage.setItem('routine_excluded', JSON.stringify(excludedItems));
+            });
+
             card.addEventListener('contextmenu', (e) => {
                 e.preventDefault();
                 toggleComplete(cardId);
             });
 
-            // Mobile long-press feature support fallback
             let pressTimer;
             card.addEventListener('touchstart', () => {
                 pressTimer = setTimeout(() => toggleComplete(cardId), 600);
@@ -787,9 +813,10 @@
                 playSynthSound('complete');
             }
             localStorage.setItem('routine_completed', JSON.stringify(completedItems));
+            syncFavoritesPanel();
         }
 
-        // Synchronize and mirror layout tracking views for starred container
+        // Synchronize layout views for starred container
         function syncFavoritesPanel() {
             const favGrid = document.getElementById('favoritesGrid');
             const favSec = document.getElementById('favoritesSection');
@@ -805,14 +832,16 @@
                     count++;
                     const clone = card.cloneNode(true);
                     
-                    // Reapply sound and event tracking modules directly into cloned nodes
                     clone.addEventListener('mouseenter', () => {
                         if (!clone.classList.contains('completed')) playSynthSound('hover');
                     });
                     clone.querySelector('.star-icon').addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
+                        e.preventDefault(); e.stopPropagation();
                         document.querySelector(`main > section:not(.sec-fav) [data-id="${cardId}"] .star-icon`).click();
+                    });
+                    clone.querySelector('.exclude-icon').addEventListener('click', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+                        document.querySelector(`main > section:not(.sec-fav) [data-id="${cardId}"] .exclude-icon`).click();
                     });
                     clone.addEventListener('contextmenu', (e) => {
                         e.preventDefault();
@@ -832,7 +861,6 @@
         }
         syncFavoritesPanel();
 
-        // Multi-Tab Trigger configuration launcher
         function launchRoutine() {
             const favCards = document.querySelectorAll('#favoritesGrid .game-card');
             favCards.forEach(card => {
@@ -858,15 +886,13 @@
         }
         handleStreakEngine();
 
-        // Live Operational Countdown Engine System to Midnight
+        // Live Operational Countdown Engine System to Midnight (Without Seconds Display)
         function updateCountdownTimer() {
             const now = new Date();
             const midnight = new Date();
-            midnight.setHours(24, 0, 0, 0); // Sets straight to tomorrow midnight 00:00:00
+            midnight.setHours(24, 0, 0, 0);
 
             const diff = midnight - now;
-
-            // Automation checking protocol to auto-clear completions at midnight live
             if (diff <= 0) {
                 localStorage.removeItem('routine_completed');
                 location.reload();
@@ -875,7 +901,6 @@
 
             const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
             const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
-            const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
 
             document.getElementById('resetTimer').textContent = `🕒 Reset: ${hours}h ${minutes}m`;
         }
@@ -885,7 +910,7 @@
         // Instant Real-time Database Search Filter System Engine
         const searchInput = document.getElementById('gameSearch');
         searchInput.addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
+            const query = e.target.value.toLowerCase().trim();
             const sections = document.querySelectorAll('.category-section');
             
             sections.forEach(section => {
@@ -895,7 +920,7 @@
                 
                 cards.forEach(card => {
                     const text = card.textContent.toLowerCase();
-                    if(text.includes(query) || title.includes(query)) {
+                    if (text.includes(query) || title.includes(query)) {
                         card.style.display = 'flex';
                         matchesInsideSection = true;
                     } else {
@@ -903,23 +928,27 @@
                     }
                 });
                 
-                if(matchesInsideSection) {
+                if (matchesInsideSection) {
                     section.style.display = 'block';
                 } else {
                     section.style.display = 'none';
                 }
             });
-            // Keep favorites configuration hidden out during clear runs if filtered clean
-            if(!query) syncFavoritesPanel();
+            if (!query) syncFavoritesPanel();
         });
 
-        // Command Engine: Pick one completely random game link and launch it
+        // Command Engine: Pick one completely random game link and launch it (Skipping Excludes)
         function playRandomGame() {
-            const allCards = document.querySelectorAll('main > section:not(.sec-fav) .game-card');
-            if(allCards.length > 0) {
-                const randomIndex = Math.floor(Math.random() * allCards.length);
-                const randomTarget = allCards[randomIndex].getAttribute('href');
+            const eligibleCards = Array.from(document.querySelectorAll('main > section:not(.sec-fav) .game-card')).filter(card => {
+                return !excludedItems.includes(card.getAttribute('data-id'));
+            });
+
+            if (eligibleCards.length > 0) {
+                const randomIndex = Math.floor(Math.random() * eligibleCards.length);
+                const randomTarget = eligibleCards[randomIndex].getAttribute('href');
                 window.open(randomTarget, '_blank');
+            } else {
+                alert("All cards have been excluded from rotation!");
             }
         }
     </script>
